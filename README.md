@@ -1,5 +1,8 @@
 # DirectToEmployees
 
+<img width="1253" alt="Screen Shot 2021-05-14 at 9 05 58 PM" src="https://user-images.githubusercontent.com/79895233/118343651-304a5900-b4f8-11eb-8bf9-c6e74b529585.png">
+
+
 # Description
 
 This application was created using React. Through the use of stateless components along with an active state component, a user is able to search and filter through the employee directory. Along with searching through the search input, a user can also click on name or DOB to sort through based on ascending or descending order. 
