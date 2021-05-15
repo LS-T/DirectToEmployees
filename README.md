@@ -15,4 +15,5 @@ This application was created using React. Through the use of stateless component
     I want to be able to sort through the results by clicking DOB or name
     So that I can easily find employees.
 
-# Deploy
+# GitHub pages deployment
+https://ls-t.github.io/DirectToEmployees/
