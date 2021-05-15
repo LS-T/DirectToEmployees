@@ -19,10 +19,10 @@ function Table(props) {
             <thead>
                 <tr>
                     <th scope="col">Image</th>
-                    <th scope="col">Name</th>
+                    <th scope="col" onClick={() => props.sortBy('name')}>Name &#8597;</th>
                     <th scope="col">Phone</th>
                     <th scope="col">Email</th>
-                    <th scope="col">D.O.B</th>
+                    <th scope="col" onClick={() => props.sortBy('age')}>D.O.B &#8597;</th>
                 </tr>
             </thead>
             <tbody>

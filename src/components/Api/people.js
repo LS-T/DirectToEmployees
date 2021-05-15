@@ -9,7 +9,8 @@ let resArray;
 class People extends Component {
     state = {
         search: "",
-        results: []
+        results: [],
+        ascending: true
     }
 
     // Make api call and exclude unwanted data
@@ -40,6 +41,7 @@ class People extends Component {
             
     }
 
+    // Handle OnChange on search input
     handleChange = event => {
         const key = event.target.value;
         const filtered = resArray.filter(entry => Object.values(entry).some(val => typeof val === "string" && val.includes(key)));
@@ -50,12 +52,28 @@ class People extends Component {
         })
     }
 
+    sortBy = key => {
+        if(this.state.ascending === true) {
+            const sortUp = this.state.results.sort((a, b) => a[key] < b[key] ? 1: -1);
+            this.setState({
+                results: sortUp,
+                ascending: false
+            })
+        } else {
+            const sortDown = this.state.results.sort((a, b) => a[key] > b[key] ? 1: -1);
+            this.setState({
+                results: sortDown,
+                ascending:true
+            })
+        }
+    }
+
     render () {
         
         return (
             <div>
                 <Search search={this.state.search} handleChange= {this.handleChange} />
-                <Table results={this.state.results} />
+                <Table results={this.state.results} sortBy={this.sortBy} />
 
             </div>
 

@@ -1,5 +1,4 @@
 import Header from "./components/Header/Header";
-import Search from "./components/Search/Search";
 import People from "./components/Api/people";
 import './App.css';
 
